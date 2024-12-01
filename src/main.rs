@@ -23,13 +23,8 @@ fn part1(input: &str) {
             .collect::<Vec<i32>>();
 
         // Add the integers to the prepared column vectors
-        for (j, &number) in parts.iter().enumerate() {
-            if j == 0 {
-                left_column.push(number);
-            } else {
-                right_column.push(number);
-            }
-        }
+        left_column.push(parts[0]);
+        right_column.push(parts[1]);
     }
 
     // Sort the columns
@@ -69,8 +64,6 @@ fn part2(input: &str) {
         // Also create a proper vector for the left column needed in the next step
         left_column.push(parts[0]);
     }
-
-    
 
     for &n in left_column.iter() {
         let score = n * number_frequency.get(&n).copied().unwrap_or(0);
