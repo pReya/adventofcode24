@@ -2,7 +2,7 @@ use std::collections::HashMap;
 use std::fs;
 
 fn main() {
-    let contents = fs::read_to_string("inputs/day1.txt").expect("Couldn't read file");
+    let contents = fs::read_to_string("input/day_1.txt").expect("Couldn't read file");
 
     part1(&contents);
     part2(&contents);
